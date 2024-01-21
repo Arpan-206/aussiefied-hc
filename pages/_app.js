@@ -10,6 +10,9 @@ import { ThemeProvider } from 'theme-ui'
 import { Provider as BalancerProvider } from 'react-wrap-balancer'
 
 const App = ({ Component, pageProps }) => (
+    // make the website upside down
+
+    <div style={{ transform: 'rotate(180deg)' }}>
   <ThemeProvider theme={theme}>
     <Meta as={Head}>
       <meta
@@ -22,6 +25,7 @@ const App = ({ Component, pageProps }) => (
     </BalancerProvider>
     <Analytics />
   </ThemeProvider>
+    </div>
 )
 
 export default App
